@@ -58,10 +58,10 @@ unsigned int sampleSound(unsigned int ADCInput)
 				globalMax = ADCInput;
 				itoa(globalMax, temp, 10);
 				
-				/*nokia_lcd_set_cursor(0,0);
+				nokia_lcd_set_cursor(0,0);
 				nokia_lcd_write_string("Max: ",1);
 				nokia_lcd_write_string(temp, 1);
-				nokia_lcd_render();*/
+				nokia_lcd_render();
 				
 			}
 			if (ADCInput < globalMin)
@@ -71,7 +71,7 @@ unsigned int sampleSound(unsigned int ADCInput)
 
 				itoa(globalMin, temp2, 10);
 				
-				/*nokia_lcd_clear();
+				nokia_lcd_clear();
 				nokia_lcd_set_cursor(0,0);
 				nokia_lcd_write_string("Max: ",1);
 				nokia_lcd_write_string(temp, 1);
@@ -79,7 +79,7 @@ unsigned int sampleSound(unsigned int ADCInput)
 				nokia_lcd_write_string("Min: ",1);
 				nokia_lcd_write_string(temp2, 1);
 				nokia_lcd_render();
-				*/
+				
 			}
 		}
 		sampleTime++;
@@ -194,10 +194,10 @@ void checkInput()
 			break;
 		case Off:
 			On = 0;
-			/*nokia_lcd_clear();
+			nokia_lcd_clear();
 			nokia_lcd_set_cursor(0,25);
 			nokia_lcd_write_string("Off",3);
-			nokia_lcd_render();*/
+			nokia_lcd_render();
 			globalMin = 1024;
 			globalMax = 0;
 			if (button)
@@ -255,8 +255,8 @@ void sendData()
 			auxSend();
 			break;
 		case Off:
-			//nokia_lcd_clear();
-			//nokia_lcd_render();
+			nokia_lcd_clear();
+			nokia_lcd_render();
 			globalMin = 1024;
 			globalMax = 0;
 			break;
